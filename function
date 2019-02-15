@@ -1,0 +1,11 @@
+function getFunction(name){
+  if (!name) return function(){ return "Who are you?" }
+  else       return function(){ return "Hello " + name; }
+}
+
+// Вызов
+var petya   = getFunction("Петя");
+var unknown = getFunction();
+
+petya();  // петя
+unknown;  // тИ кто???
